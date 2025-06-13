@@ -8,12 +8,37 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "server/server.js"
+      "src": "/api/admin/(.*)",
+      "dest": "server/server.js",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "OPTIONS"
+      ]
+    },
+    {
+      "src": "/api/blog/(.*)",
+      "dest": "server/server.js",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "OPTIONS"
+      ]
     },
     {
       "src": "/(.*)",
-      "dest": "server/server.js"
+      "dest": "server/server.js",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "OPTIONS"
+      ]
     }
   ],
   "env": {
